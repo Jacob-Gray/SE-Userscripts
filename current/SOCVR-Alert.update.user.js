@@ -22,7 +22,7 @@
             "cvpls":"http://i.imgur.com/xyQb3Y4.jpg"
         },
         currentVersion = 0.1,
-        updateURL = "https://raw.githubusercontent.com/Jacob-Gray/SE-Userscripts/master/current/SOCVR-Alert.update.js",
+        updateURL = "https://raw.githubusercontent.com/Jacob-Gray/SE-Userscripts/master/current/SOCVR-Alert.update.user.js",
         checkUpdateURL = "https://raw.githubusercontent.com/Jacob-Gray/SE-Userscripts/master/current/SOCVR-Alert.update.version",
         styles = ".socvr-alert-snackbar{position:fixed;display:none;z-index:100;top:0;left:0;right:0;background:#305d5d;font-size: 110%;color:white;text-align:center;padding:10px;font-family:inherit;}";
 
