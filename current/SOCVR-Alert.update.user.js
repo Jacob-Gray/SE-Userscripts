@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SOCVR Alert
 // @namespace    https://github.com/Jacob-Gray/SE-Userscripts
-// @version      0.2
+// @version      0.3
 // @description  Watch's a chat room for new smoke-detector posts and cv-pls, and triggers a desktop notification
 // @author       Jacob Gray
 // @match        *://chat.meta.stackexchange.com/rooms/*
@@ -21,7 +21,7 @@
             "smokey":"https://i.stack.imgur.com/m9xyh.jpg?s=128&g=1",
             "cvpls":"http://i.imgur.com/xyQb3Y4.jpg"
         },
-        currentVersion = 0.2,
+        currentVersion = 0.3,
         updateURL = "https://raw.githubusercontent.com/Jacob-Gray/SE-Userscripts/master/current/SOCVR-Alert.update.user.js",
         checkUpdateURL = "https://raw.githubusercontent.com/Jacob-Gray/SE-Userscripts/master/current/SOCVR-Alert.update.version",
         styles = ".socvr-alert-snackbar{position:fixed;display:none;z-index:100;top:0;left:0;right:0;background:#305d5d;font-size: 110%;color:white;text-align:center;padding:10px;font-family:inherit;}";
@@ -42,7 +42,6 @@
         $.ajax({
             url: checkUpdateURL,
             success: function(data){
-                console.log("SOCVR Alert: New version detected "+data);
                 if(data > currentVersion) snackbar("SOCVR Alert Version "+data+" is published! Click here to update.", function(){
                     window.open(updateURL, '_blank');
                     $(".socvr-alert-snackbar").html("Click here to reload the page after updating").off("click").on("click",function(){
@@ -54,6 +53,7 @@
     }
 
     function init(){
+
         var setUp = true;
 
         if (!("Notification" in window)) {
@@ -85,8 +85,7 @@
     }
 
 
-    $(document).ready(function(){
-        
+    $(function(){
         setTimeout(init, 1000);//There has to be a better way to do this
     });
 
@@ -139,6 +138,7 @@
         if (Notification.permission === "granted") {
             var notification = new Notification(msg,options);
             notification.onclick = url !== ""?function(event) {
+                this.close();
                 openTab(event, url);
             }: null;
         }
