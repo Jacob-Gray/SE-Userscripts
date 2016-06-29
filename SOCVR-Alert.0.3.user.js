@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SOCVR Alert
 // @namespace    https://github.com/Jacob-Gray/SE-Userscripts
-// @version      0.3
+// @version      0.4
 // @description  Watch's a chat room for new smoke-detector posts and cv-pls, and triggers a desktop notification
 // @author       Jacob Gray
 // @match        *://chat.meta.stackexchange.com/rooms/*
@@ -21,7 +21,7 @@
             "smokey":"https://i.stack.imgur.com/m9xyh.jpg?s=128&g=1",
             "cvpls":"http://i.imgur.com/xyQb3Y4.jpg"
         },
-        currentVersion = 0.3,
+        currentVersion = 0.4,
         updateURL = "https://raw.githubusercontent.com/Jacob-Gray/SE-Userscripts/master/current/SOCVR-Alert.update.user.js",
         checkUpdateURL = "https://raw.githubusercontent.com/Jacob-Gray/SE-Userscripts/master/current/SOCVR-Alert.update.version",
         styles = ".socvr-alert-snackbar{position:fixed;display:none;z-index:100;top:0;left:0;right:0;background:#305d5d;font-size: 110%;color:white;text-align:center;padding:10px;font-family:inherit;}";
@@ -116,7 +116,7 @@
                     url = "";
 
                 $("a", msg).each(function(){
-                    if( /^(http:\/\/|\/\/)(www\.)?stackoverflow.com\/(questions|q|answers|a)\/\d+/.test($(this).attr("href"))) url = $(this).attr("href");
+                    if( /^(http:\/\/|\/\/)(www\.)?(stackoverflow|stackexchange|askubuntu).com\/(questions|q|answers|a)\/\d+/.test($(this).attr("href"))) url = $(this).attr("href");
                 });
 
                 notify("New SmokeDetector post",reason, images.smokey, url);
