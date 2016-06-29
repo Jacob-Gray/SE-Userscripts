@@ -1,7 +1,8 @@
 # SE-Userscripts
 A collection of user scripts for the Stack Exchange network.
 
-###SOCVR-Alert
+###SOCVR-Alert | [Install](https://github.com/Jacob-Gray/SE-Userscripts/blob/master/current/SOCVR-Alert.update.user.js)
+
 SOCVR-Alert is a script to used in the [SO Close Vote Reviewers](http://chat.stackoverflow.com/rooms/41570/so-close-vote-reviewers) chatroom on Stack Overflow. It parses incoming messages and alerts you of <kbd>cv-pls</kbd> requests and [Smoke Detector](https://github.com/Charcoal-SE/SmokeDetector) posts.
 
 Features:
