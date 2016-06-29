@@ -5,6 +5,11 @@ A collection of user scripts for the Stack Exchange network.
 
 SOCVR-Alert is a script to used in the [SO Close Vote Reviewers](http://chat.stackoverflow.com/rooms/41570/so-close-vote-reviewers) chatroom on Stack Overflow. It parses incoming messages and alerts you of <kbd>cv-pls</kbd> requests and [Smoke Detector](https://github.com/Charcoal-SE/SmokeDetector) posts.
 
+Usage:
+
+1. Join the [SOCVR chatroom](http://chat.stackoverflow.com/rooms/41570/so-close-vote-reviewers)(Or a room that has smoke-detector/cv-pls requests)
+2. Leave the room open in your browser to be notified.
+
 Features:
 - Notifies of new SD and <kbd>cv-pls</kbd> posts
 - Alerts you in a desktop notification:
