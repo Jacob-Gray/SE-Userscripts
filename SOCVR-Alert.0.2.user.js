@@ -42,6 +42,7 @@
         $.ajax({
             url: checkUpdateURL,
             success: function(data){
+                console.log("SOCVR Alert: New version detected "+data);
                 if(data > currentVersion) snackbar("SOCVR Alert Version "+data+" is published! Click here to update.", function(){
                     window.open(updateURL, '_blank');
                     $(".socvr-alert-snackbar").html("Click here to reload the page after updating").off("click").on("click",function(){
@@ -53,7 +54,6 @@
     }
 
     function init(){
-
         var setUp = true;
 
         if (!("Notification" in window)) {
@@ -85,7 +85,8 @@
     }
 
 
-    $(function(){
+    $(document).ready(function(){
+        
         setTimeout(init, 1000);//There has to be a better way to do this
     });
 
