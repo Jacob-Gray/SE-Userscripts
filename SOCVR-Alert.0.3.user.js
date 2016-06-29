@@ -43,7 +43,7 @@
             url: checkUpdateURL,
             success: function(data){
                 if(data > currentVersion) snackbar("SOCVR Alert Version "+data+" is published! Click here to update.", function(){
-                    window.open(updateURL, '_blank');
+                    document.location = updateURL;
                     $(".socvr-alert-snackbar").html("Click here to reload the page after updating").off("click").on("click",function(){
                         document.location.reload();
                     });
