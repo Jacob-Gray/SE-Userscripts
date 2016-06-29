@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SOCVR Alert
 // @namespace    https://github.com/Jacob-Gray/SE-Userscripts
-// @version      0.4
+// @version      0.5
 // @description  Watch's a chat room for new smoke-detector posts and cv-pls, and triggers a desktop notification
 // @author       Jacob Gray
 // @match        *://chat.meta.stackexchange.com/rooms/*
@@ -21,7 +21,7 @@
             "smokey":"https://i.stack.imgur.com/m9xyh.jpg?s=128&g=1",
             "cvpls":"http://i.imgur.com/xyQb3Y4.jpg"
         },
-        currentVersion = 0.4,
+        currentVersion = 0.5,
         updateURL = "https://raw.githubusercontent.com/Jacob-Gray/SE-Userscripts/master/current/SOCVR-Alert.update.user.js",
         checkUpdateURL = "https://raw.githubusercontent.com/Jacob-Gray/SE-Userscripts/master/current/SOCVR-Alert.update.version",
         styles = ".socvr-alert-snackbar{position:fixed;display:none;z-index:100;top:0;left:0;right:0;background:#305d5d;font-size: 110%;color:white;text-align:center;padding:10px;font-family:inherit;}";
@@ -112,11 +112,12 @@
                 isCVPls = msg.contains(msg.querySelector(".ob-post-tag")) && /cv-pl[sz]/.test(msg.querySelector(".ob-post-tag").innerHTML);
 
             if(/\[ SmokeDetector \]/.test(content)){//Is smokey post
+                console.log("Smokey");
                 var reason = getText(msg).split("]")[1].split(":")[0].replace(/^ */g,""),
                     url = "";
 
                 $("a", msg).each(function(){
-                    if( /^(http:\/\/|\/\/)(www\.)?(stackoverflow|stackexchange|askubuntu).com\/(questions|q|answers|a)\/\d+/.test($(this).attr("href"))) url = $(this).attr("href");
+                    if( /^(http(s)?:\/\/|\/\/)(\w+\.)?(stackoverflow|stackexchange|askubuntu).com\/(questions|q|answers|a)\/\d+/.test($(this).attr("href"))) url = $(this).attr("href");
                 });
 
                 notify("New SmokeDetector post",reason, images.smokey, url);
