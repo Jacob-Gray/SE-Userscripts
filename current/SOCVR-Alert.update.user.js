@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SOCVR Alert
 // @namespace    https://github.com/Jacob-Gray/SE-Userscripts
-// @version      0.1
+// @version      0.2
 // @description  Watch's a chat room for new smoke-detector posts and cv-pls, and triggers a desktop notification
 // @author       Jacob Gray
 // @match        *://chat.meta.stackexchange.com/rooms/*
@@ -21,7 +21,7 @@
             "smokey":"https://i.stack.imgur.com/m9xyh.jpg?s=128&g=1",
             "cvpls":"http://i.imgur.com/xyQb3Y4.jpg"
         },
-        currentVersion = 0.1,
+        currentVersion = 0.2,
         updateURL = "https://raw.githubusercontent.com/Jacob-Gray/SE-Userscripts/master/current/SOCVR-Alert.update.user.js",
         checkUpdateURL = "https://raw.githubusercontent.com/Jacob-Gray/SE-Userscripts/master/current/SOCVR-Alert.update.version",
         styles = ".socvr-alert-snackbar{position:fixed;display:none;z-index:100;top:0;left:0;right:0;background:#305d5d;font-size: 110%;color:white;text-align:center;padding:10px;font-family:inherit;}";
@@ -84,11 +84,10 @@
         }
     }
 
-    init();
 
-
-
-
+    $(function(){
+        setTimeout(init, 1000);//There has to be a better way to do this
+    });
 
     function parseInput(Nodes, isMsgList){
         if(isMsgList) checkMessages(Nodes);
@@ -112,22 +111,22 @@
             var content = msg.querySelector(".content").innerHTML.replace(/<([^>]+)>/g,""),
                 isCVPls = msg.contains(msg.querySelector(".ob-post-tag")) && /cv-pl[sz]/.test(msg.querySelector(".ob-post-tag").innerHTML);
 
-            console.log(content);
-            console.log(/\[ SmokeDetector \]/.test(content));
-
             if(/\[ SmokeDetector \]/.test(content)){//Is smokey post
-                var reason = getText(msg).split("]")[1].split(":")[0],
+                var reason = getText(msg).split("]")[1].split(":")[0].replace(/^ */g,""),
                     url = "";
+
                 $("a", msg).each(function(){
-                    if( /^(http:\/\/|\/\/)(www\.)?stackoverflow.com\/(questions|q)\/\d+/.test($(this).attr("href"))) url = $(this).attr("href");
+                    if( /^(http:\/\/|\/\/)(www\.)?stackoverflow.com\/(questions|q|answers|a)\/\d+/.test($(this).attr("href"))) url = $(this).attr("href");
                 });
+
                 notify("New SmokeDetector post",reason, images.smokey, url);
             }
             else if(isCVPls){//Is CV Request
-                var reason = getText(msg).split(" - ")[0].replace(/^ +/g,""),
+                var reason = getText(msg).split(" - ")[0],
                     url = "";
+
                 $("a", msg).each(function(){
-                    if( /stackoverflow.com\/(questions|q)\/\d+/.test($(this).attr("href"))) url = $(this).attr("href");
+                    if( /stackoverflow.com\/(questions|q|answers|a)\/\d+/.test($(this).attr("href"))) url = $(this).attr("href");
                 });
                 notify("New close vote request", reason, images.cvpls, url);
             }
@@ -160,7 +159,7 @@
     }
 
     function getText(msg){
-        return $(".content", msg).clone().children().remove().end().text();
+        return $(".content", msg).clone().children().remove().end().text().replace(/^ */g,"");
     }
 
 })();
