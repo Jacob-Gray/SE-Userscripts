@@ -1,5 +1,5 @@
 {
   "version":0.6,
   "summary":"New updating system",
-  "changes":"Redid the updating system to provide more infomration, as well as a dialog module"
+  "changes":"Rebuilt the updating system to provide more information, added a dialog module to display larger amounts of data."
 }
