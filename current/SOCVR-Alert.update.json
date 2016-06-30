@@ -1,5 +1,6 @@
 {
   "version":0.7,
+  "styles":1,
   "summary":"Bug fix",
   "changes":"Fixed a bug that caused the updated dialog to show everytime the page loaded"
 }
