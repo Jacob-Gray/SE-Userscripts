@@ -1,5 +1,5 @@
 {
-  "version":0.6,
-  "summary":"New updating system",
-  "changes":"Rebuilt the updating system to provide more information, added a dialog module to display larger amounts of data."
+  "version":0.7,
+  "summary":"Bug fix",
+  "changes":"Fixed a bug that caused the updated dialog to show everytime the page loaded"
 }
