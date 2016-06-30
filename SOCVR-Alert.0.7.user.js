@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         SOCVR Alert
 // @namespace    https://github.com/Jacob-Gray/SE-Userscripts
-// @version      0.6
+// @version      0.7
 // @description  Watch's a chat room for new smoke-detector posts and cv-pls, and triggers a desktop notification
 // @author       Jacob Gray
 // @match        *://chat.meta.stackexchange.com/rooms/*
@@ -23,7 +23,7 @@
             "smokey":"https://i.stack.imgur.com/m9xyh.jpg?s=128&g=1",
             "cvpls":"http://i.imgur.com/xyQb3Y4.jpg"
         },
-        currentVersion = 0.6,
+        currentVersion = 0.7,
         updateURL = "https://raw.githubusercontent.com/Jacob-Gray/SE-Userscripts/master/current/SOCVR-Alert.update.user.js",
         checkUpdateURL = "https://raw.githubusercontent.com/Jacob-Gray/SE-Userscripts/master/current/SOCVR-Alert.update.json",
         styles = ".socvr-alert-dialog,.socvr-alert-snackbar{position:fixed;display:none;top:0;left:0;right:0}.socvr-alert-snackbar{z-index:100;cursor:pointer;background:#305d5d;font-size:110%;color:#fff;text-align:center;font-family:inherit;padding:10px}.socvr-alert-dialog{bottom:0;z-index:99;justify-content:center;align-items:center}.socvr-alert-dialog.active{display:flex!important}.socvr-alert-dialog-back{position:absolute;top:0;left:0;right:0;bottom:0;opacity:.5;background:linear-gradient(to left,#485563,#29323c)}.socvr-alert-dialog-con{max-width:600px;opacity:0;position:relative;background:#fff;transform:translateY(-50px);transition:.3s;margin:auto;border-radius:2px;box-shadow:0 0 2px rgba(0,0,0,.2),0 2px 1px rgba(0,0,0,.2);padding:10px}.socvr-alert-dialog-con ol{padding-left:15px}.socvr-alert-dialog-con.active{transform:none;opacity:1}.btn{background:#13a38d;border-radius:2em;color:#FFF;cursor:pointer;font-size:90%;padding:4px 7px}.btn:hover{background:#41af9e}";
@@ -50,7 +50,7 @@
             else {
                 if(GM_getValue("socvr-alert-version") < currentVersion || GM_getValue("socvr-alert-version") === undefined){
                     dialog("<p>"+data.summary+"</p><p><b>Changelog</b>:"+listify(data.changes)+"</p>","Updated SOCVR-Alert to Ver. "+data.version);
-                    GM_getValue("socvr-alert-version", currentVersion);
+                    GM_setValue("socvr-alert-version", currentVersion);
                 }
             }
         });
