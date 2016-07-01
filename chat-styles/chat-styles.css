@@ -108,3 +108,15 @@ a{
     color: #545454;
     border:none;
 }
+#tabcomplete li{
+  background: teal;
+  border: none;
+  color: white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+#present-users, ul#my-rooms{
+  border:none;
+}
+ul#my-rooms>li.activity-0{
+  color:#5C6BC0;
+}
