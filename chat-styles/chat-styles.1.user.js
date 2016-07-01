@@ -12,5 +12,5 @@
 (function() {
     'use strict';
 
-    $("head").append("<link rel=\"stylesheet\" type=\"text/css\" href=\"https://rawgit.com/Jacob-Gray/SE-Userscripts/master/chat-styles/chat-styles.css\">");
+    $("head").append("<link rel=\"stylesheet\" type=\"text/css\" href=\"https://jacob-gray.github.io/SE-Userscripts/chat-styles/chat-styles.css\">");
 })();
