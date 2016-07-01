@@ -60,3 +60,6 @@ div.message.reply-child .content:before{
   background:#305d5d;
   opacity:0.3;
 }
+.catchup-marker{
+  border-top: 1px solid #305d5d;
+}
