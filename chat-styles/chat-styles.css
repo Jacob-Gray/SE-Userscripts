@@ -2,6 +2,8 @@
 #container{
   background:#222021;
   color:white;
+}
+*{
   font-family: 'Source Sans Pro', sans-serif;
 }
 .messages{
@@ -76,3 +78,13 @@ a{
   background-color: #948956 !important;
   color: white !important;
 }
+#sidebar{
+  color:white;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+#sidebar #info #roomtitle{
+  text-shadow:none;
+  font-family: 'Source Sans Pro', sans-serif;
+  
+}
+
