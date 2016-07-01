@@ -84,6 +84,7 @@ a{
 }
 #sidebar #info #roomtitle{
   text-shadow:none;
+  color:white;
   font-family: 'Source Sans Pro', sans-serif;
   
 }
