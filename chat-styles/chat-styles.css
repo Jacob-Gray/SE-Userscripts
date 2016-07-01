@@ -150,6 +150,9 @@ background: teal;
 .highlight{
   background:transparent !important;
   animation: bounce .8s;
+  background:rgba(0,0,0,0.5);
+  padding:1px;
+  border-radius:2px;
   transform-origin: center bottom;
 }
 @keyframes bounce {
