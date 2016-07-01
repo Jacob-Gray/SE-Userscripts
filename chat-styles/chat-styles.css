@@ -120,3 +120,6 @@ a{
 ul#my-rooms>li.activity-0{
   color:#5C6BC0;
 }
+ul#my-rooms>li.activity-2 {
+    color: white;
+}
