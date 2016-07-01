@@ -129,6 +129,9 @@ div#starred-posts>div>ul>li{
 .flair{
   color:#5C6BC0;
 }
+.wmd-mini-button, .wmd-mini-button:visited{
+  color:#5C6BC0;
+}
 .msg-small{
   color:white;
 }
