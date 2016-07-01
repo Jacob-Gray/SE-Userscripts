@@ -20,10 +20,13 @@
 div.message.reply-parent,
 div.message.reply-child{
   background:rgba(0,0,0,0.1);
+  position:relative;
 }
 div.message.reply-parent .content:before,
 div.message.reply-child .content:before{
   content:"!";
+  position:absolute;
+  left:0;
   display:inline-block;
   color:white;
   background:#305d5d;
