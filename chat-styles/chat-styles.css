@@ -89,7 +89,7 @@ a{
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.popup, #main.message-admin-mode .message-controls, #conversation-sel{
+.popup, #main.message-admin-mode .message-controls, #conversation-sel, .wmd-prompt-dialog{
   background: #333;
   color: white;
   border-radius: 2px;
@@ -126,7 +126,9 @@ ul#my-rooms>li.activity-2 {
 div#starred-posts>div>ul>li{
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
-
+.flair{
+  color:#5C6BC0;
+}
 .msg-small{
   color:white;
 }
