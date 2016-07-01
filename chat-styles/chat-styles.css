@@ -73,7 +73,7 @@ div.message.reply-child .content:before{
 a{
   color: #5C6BC0;
 }
-.ob-post-tag, .ob-user-tag, .ob-post-tag[style], .ob-user-tag[style]{
+.ob-post-tag, .ob-user-tag, .tag, .ob-post-tag[style], .ob-user-tag[style]{
   border:none !important;
   background-color: #948956 !important;
   color: white !important;
@@ -93,6 +93,7 @@ a{
   color: white;
   border-radius: 2px;
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  border:none;
   border-left: 3px solid teal;
 }
 
