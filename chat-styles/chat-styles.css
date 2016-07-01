@@ -148,7 +148,7 @@ background: teal;
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 .highlight{
-  background:#C2185B;
+  background:#C2185B !important;
 }
 
 .message.posted,.message.neworedit {
