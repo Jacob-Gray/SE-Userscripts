@@ -32,7 +32,6 @@ div.message.reply-child .content:before{
   background:#305d5d;
   line-height:1em;
   width:1em;
-  font-weight:bold;
   text-align:center;
   border-radius:50%;
 }
