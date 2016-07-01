@@ -1,1 +1,7 @@
-
+#container{
+  background:#222021;
+  color:white;
+}
+.messages{
+  background:#333;
+}
