@@ -139,3 +139,14 @@ div#starred-posts>div>ul>li{
   background: #404040;
   color: white;
 }
+#reply-count, .reply-count{
+background: teal;
+    border: none;
+    color: white !important;
+    text-shadow: none;
+    font-size: 90%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.hightlight{
+  border-color:#C2185B;
+}
