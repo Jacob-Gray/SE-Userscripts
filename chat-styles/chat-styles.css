@@ -68,3 +68,11 @@ div.message.reply-child .content:before{
   padding: 1px 2px;
   border-radius: 2px;
 }
+a{
+  color: #5C6BC0;
+}
+.ob-post-tag, .ob-user-tag, .ob-post-tag[style], .ob-user-tag[style]{
+  border:none !important;
+  background-color: #948956 !important;
+  color: white !important;
+}
