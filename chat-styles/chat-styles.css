@@ -147,12 +147,13 @@ background: teal;
     font-size: 90%;
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
+
 .highlight{
-  background:rgba(0,0,0,0.5) !important;
   animation: bounce .8s;
   padding:1px;
   border-radius:2px;
   transform-origin: center bottom;
+  background: rgba(0,0,0,0.5) !important;
 }
 @keyframes bounce {
   from, 20%, 53%, 80%, to {
