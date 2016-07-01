@@ -1,11 +1,16 @@
+@import 'https://fonts.googleapis.com/css?family=Lato';
 #container{
   background:#222021;
   color:white;
+  font-family: "lato";
 }
 .messages{
   background:#333;
   color:white;
-  border-radius:0;
+  border-radius:2px;
   border-left:3px solid #305d5d;
   box-shadow:0 0 2px rgba(0,0,0,.2),0 2px 1px rgba(0,0,0,.2);
+}
+.message a.signature{
+  color:white;
 }
