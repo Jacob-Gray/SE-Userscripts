@@ -26,12 +26,13 @@ div.message.reply-parent .content:before,
 div.message.reply-child .content:before{
   content:"!";
   position:absolute;
-  left:0;
-  display:inline-block;
+  left:2px;
+  top:2px;
   color:white;
   background:#305d5d;
   line-height:1em;
   width:1em;
+  font-weight:bold;
   text-align:center;
   border-radius:50%;
 }
