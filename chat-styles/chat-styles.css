@@ -1,8 +1,8 @@
-@import 'https://fonts.googleapis.com/css?family=Lato';
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro';
 #container{
   background:#222021;
   color:white;
-  font-family: "lato";
+  font-family: 'Source Sans Pro', sans-serif;
 }
 .messages{
   background:#333;
@@ -11,6 +11,6 @@
   border-left:3px solid #305d5d;
   box-shadow:0 0 2px rgba(0,0,0,.2),0 2px 1px rgba(0,0,0,.2);
 }
-.message a.signature{
+.user-container  a.signature{
   color:white;
 }
