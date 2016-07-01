@@ -130,3 +130,7 @@ div#starred-posts>div>ul>li{
 .msg-small{
   color:white;
 }
+.monologue .timestamp, div.message .meta{
+  background: #404040;
+  color: white;
+}
