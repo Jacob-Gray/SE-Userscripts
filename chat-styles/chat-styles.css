@@ -150,3 +150,7 @@ background: teal;
 .highlight{
   background:#C2185B;
 }
+
+.message.posted {
+    color: #5C6BC0
+}
