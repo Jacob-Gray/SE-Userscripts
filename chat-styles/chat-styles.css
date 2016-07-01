@@ -63,3 +63,8 @@ div.message.reply-child .content:before{
 .catchup-marker{
   border-top: 1px solid #305d5d;
 }
+.mention{
+  background: #C2185B;
+  padding: 1px 2px;
+  border-radius: 2px;
+}
