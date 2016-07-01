@@ -151,6 +151,6 @@ background: teal;
   background:#C2185B;
 }
 
-.message.posted {
+.message.posted,.message.neworedit {
     color: #5C6BC0
 }
