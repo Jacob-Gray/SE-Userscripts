@@ -97,10 +97,14 @@ a{
   border:none;
   border-left: 3px solid teal;
 }
-#search{
+#searchbox{
   font-family: 'Source Sans Pro', sans-serif;
     background: #333;
     border: none;
     padding: 2px 3px;
     font-family: inherit;
+}
+#sidebar #info #sidebar-menu{
+    color: #545454;
+    border:none;
 }
