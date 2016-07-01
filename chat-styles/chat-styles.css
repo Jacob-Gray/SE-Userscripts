@@ -14,3 +14,16 @@
 .user-container  a.signature{
   color:white;
 }
+.mine .messages {
+    background-color: #494a54;
+}
+div.message.reply-parent:before,
+div.message.reply-child:before{
+  content:"<";
+  color:white;
+  background:#305d5d;
+  line-height:1em;
+  width:1em;
+  text-align:center;
+  border-radius:50%;
+}
