@@ -154,3 +154,8 @@ background: teal;
 .message.posted,.message.neworedit {
     color: #5C6BC0
 }
+.notification, #feed-ticker{
+  background:#333;
+  color:white;
+  border:none;
+}
