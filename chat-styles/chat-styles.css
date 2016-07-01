@@ -117,7 +117,7 @@ a{
 #present-users, ul#my-rooms{
   border:none;
 }
-ul#my-rooms>li.activity-0{
+ul#my-rooms>li.activity-0, ul#my-rooms>li.activity-1{
   color:#5C6BC0;
 }
 ul#my-rooms>li.activity-2 {
