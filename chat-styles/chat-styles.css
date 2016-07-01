@@ -46,3 +46,17 @@ div.message.reply-child .content:before{
   resize:none;
   font-family: 'Source Sans Pro', sans-serif;
 }
+.system-message{
+  color:white;
+}
+.button{
+  background: #305d5d;
+  padding: 3px 14px;
+}
+.button:hover{
+  background: #509595;
+}
+.button.disabled, .button.disabled:hover{
+  background:#305d5d;
+  opacity:0.3;
+}
