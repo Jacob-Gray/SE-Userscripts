@@ -193,3 +193,10 @@ filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000
 -webkit-filter: invert(75%);
         filter: invert(75%);
 }
+.popup .btn-close, #conversation-sel .btn-close{
+  background:#305d5d;
+}
+.popup .btn-close:hover, #conversation-sel .btn-close:hover{
+  background:#305d5d;
+  opacity:0.3;
+}
