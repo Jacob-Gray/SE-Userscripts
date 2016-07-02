@@ -48,7 +48,7 @@ div.message.reply-child .content:before{
   resize:none;
   font-family: 'Source Sans Pro', sans-serif;
 }
-.system-message{
+.system-message-container .system-message{
   color:white;
 }
 .button{
