@@ -184,7 +184,7 @@ background: teal;
   color:white;
   border:none;
 }
-.ob-wikipedia, .ob-amazon, .ob-gist, .ob-message, .ob-lpadbug, .ob-manpage, .ob-blog, .ob-exception, .ob-anime{
+.ob-wikipedia, .ob-amazon, .ob-gist, .ob-message, .ob-lpadbug, .ob-manpage, .ob-blog, .ob-exception, .ob-anime, .ob-post{
   background: #222021;
   color: white;
 }
