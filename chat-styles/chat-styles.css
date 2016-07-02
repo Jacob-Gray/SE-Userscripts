@@ -49,7 +49,7 @@ div.message.reply-child .content:before{
   font-family: 'Source Sans Pro', sans-serif;
 }
 .system-message-container .system-message{
-  color:white;
+  color:white !important;
 }
 .button{
   background: #305d5d;
