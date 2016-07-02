@@ -188,7 +188,7 @@ background: teal;
   background: #222021;
   color: white;
 }
-#footer-logo img{
+#footer-logo img,.vote-count-container.sidebar-vote.stars  .img.vote{
 filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.75 0.25" /><feFuncG type="table" tableValues="0.75 0.25" /><feFuncB type="table" tableValues="0.75 0.25" /></feComponentTransfer></filter></svg>#filter');
 -webkit-filter: invert(75%);
         filter: invert(75%);
